@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>DreamVerse | Games</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+html{scroll-behavior:smooth;}
+body{background:#f7f8fc;padding-top:90px;}
+
+/* NAVBAR */
+.navbar{
+  position:fixed;top:0;left:0;width:100%;height:90px;
+  background:#fff;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 60px;
+  box-shadow:0 6px 20px rgba(0,0,0,.12);
+  z-index:999;
+}
+.navbar h1{font-size:28px;font-weight:700;}
+.navbar a{
+  margin-left:25px;
+  text-decoration:none;
+  color:#000;
+  padding:10px 18px;
+  border-radius:20px;
+  transition:.3s;
+}
+.navbar a:hover{background:#ffd6e8;}
+
+/* HERO (COURSE-LIKE GRADIENT) */
+.hero{
+  background:linear-gradient(90deg,#ff6fb1,#9b7bff,#5bbcff,#5be7c4);
+  padding:90px 60px;
+  border-radius:0 0 40px 40px;
+  color:#fff;
+}
+.hero h2{font-size:44px;margin-bottom:10px;}
+.hero p{font-size:18px;opacity:.95;}
+
+/* SECTION */
+section{padding:90px 60px;}
+section h2{
+  text-align:center;
+  font-size:36px;
+  margin-bottom:50px;
+}
+
+/* PARTNERS */
+.partners-grid{
+  display:flex;
+  justify-content:center;
+  gap:40px;
+  flex-wrap:wrap;
+}
+.partner{
+  width:140px;
+  height:140px;
+  background:#fff;
+  border-radius:50%;
+  box-shadow:0 12px 30px rgba(0,0,0,.15);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  color:#000;
+  transition:.3s;
+}
+.partner:hover{transform:scale(1.1);}
+.partner img{
+  width:60px;height:60px;
+  object-fit:contain;
+  margin-bottom:8px;
+}
+
+/* GAMES GRID */
+.games-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(180px,1fr));
+  gap:30px;
+}
+.game-card{
+  background:#fff;
+  padding:20px;
+  border-radius:30px;
+  box-shadow:0 15px 35px rgba(0,0,0,.15);
+  text-align:center;
+  cursor:pointer;
+  animation:fadeUp .8s ease forwards;
+}
+.game-card:hover{transform:scale(1.08);}
+.game-card img{
+  width:100%;
+  height:130px;
+  object-fit:cover;
+  border-radius:20px;
+  margin-bottom:12px;
+}
+.game-card h4{margin-bottom:6px;}
+.game-card span{font-size:13px;color:#555;}
+
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(40px);}
+  to{opacity:1;transform:translateY(0);}
+}
+
+/* LOAD MORE */
+.load-more{
+  margin:60px auto 0;
+  display:block;
+  padding:14px 36px;
+  border:none;
+  border-radius:30px;
+  font-size:16px;
+  cursor:pointer;
+  background:#ffd6e8;
+}
+
+/* POPUP */
+.popup{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.5);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
+}
+.popup-box{
+  background:#fff;
+  padding:40px;
+  border-radius:30px;
+  text-align:center;
+  animation:zoom .4s ease;
+}
+@keyframes zoom{
+  from{transform:scale(.6);opacity:0;}
+  to{transform:scale(1);opacity:1;}
+}
+.popup-box button{
+  margin-top:15px;
+  padding:12px 30px;
+  border:none;
+  border-radius:25px;
+  cursor:pointer;
+}
+
+/* FOOTER */
+footer{
+  background:#ffd6e8;
+  padding:25px;
+  text-align:center;
+  font-weight:500;
+}
+
+/* MOBILE */
+@media(max-width:900px){
+  .hero h2{font-size:34px;}
+  .navbar{flex-direction:column;height:auto;padding:20px;}
+}
+</style>
+</head>
+
+<body>
+
+<header class="navbar">
+  <h1>DreamVerse</h1>
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="course.html">Courses</a>
+    <a href="games.html">Games</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>Fun & Fantasy Games 🎮</h2>
+  <center><p>Play, explore and enjoy colourful fantasy games</p></center>
+</section>
+
+<!-- PARTNERS FIRST -->
+<section>
+  <h2>Game Partners</h2>
+  <div class="partners-grid">
+    <a class="partner" href="https://poki.com" target="_blank">
+      <img src="https://raw.githubusercontent.com/abuthaheer29/Dreamverse/a4d167bb16b6ad39173ca35cc4a91ad572e8a620/unnamed.jpg">
+      Poki
+    </a>
+    <a class="partner" href="https://www.crazygames.com" target="_blank">
+      <img src="https://github.com/abuthaheer29/Dreamverse/blob/a4d167bb16b6ad39173ca35cc4a91ad572e8a620/logo.png?raw=true">
+      CrazyGames
+    </a>
+    <a class="partner" href="https://playhop.com" target="_blank">
+      <img src="https://playhop.com/favicon.ico">
+      Playhop
+    </a>
+    <a class="partner" href="https://www.msn.com/en-in/play" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg">
+      MSN
+    </a>
+  </div>
+</section>
+
+<!-- GAMES BELOW -->
+<section>
+  <h2>Popular Games</h2>
+
+  <div class="games-grid" id="gameGrid">
+    <div class="game-card" onclick="openPopup('Racing Game')"><img src="https://github.com/abuthaheer29/Dreamverse/blob/5e01a2e20c282ee8fd260da46ce4b7030d0e7cfc/moto-x3m.avif?raw=true"><h4>Racing</h4><span>Fast</span></div>
+    <div class="game-card" onclick="openPopup('Puzzle Game')"><img src="https://github.com/abuthaheer29/Dreamverse/blob/5e01a2e20c282ee8fd260da46ce4b7030d0e7cfc/unnamed%20(3).webp?raw=true"><h4>Puzzle</h4><span>Brain</span></div>
+    <div class="game-card" onclick="openPopup('Action Game')"><img src="https://github.com/abuthaheer29/Dreamverse/blob/5e01a2e20c282ee8fd260da46ce4b7030d0e7cfc/1520055297125.jpeg?raw=true"><h4>Action</h4><span>Thrill</span></div>
+    <div class="game-card" onclick="openPopup('Car Game')"><img src="https://github.com/abuthaheer29/Dreamverse/blob/111c4ee7386efa8befedf4fbaacf1518d5adde9b/unnamed.png?raw=true"><h4>Cars</h4><span>Speed</span></div>
+    <div class="game-card" onclick="openPopup('Arcade Game')"><img src="https://github.com/abuthaheer29/Dreamverse/blob/5e01a2e20c282ee8fd260da46ce4b7030d0e7cfc/tyRW8w6oRrzerPcDER5Sce-1200-80.jpg?raw=true"><h4>Arcade</h4><span>Classic</span></div>
+    <div class="game-card" onclick="openPopup('Sports Game')"><img src="https://github.com/abuthaheer29/Dreamverse/blob/5163c3bce35c99e9ceccee0e2c5aa55d875e9770/Best_Sports_Games_ae5683e823.webp?raw=true"><h4>Sports</h4><span>Play</span></div>
+  </div>
+
+  <button class="load-more" onclick="loadMore()">Load More</button>
+</section>
+
+<footer>© 2025 DreamVerse Fantasy College</footer>
+
+<!-- POPUP -->
+<div class="popup" id="popup">
+  <div class="popup-box">
+    <h3 id="popupTitle"></h3>
+    <p>Game loading...</p>
+    <button onclick="closePopup()">Close</button>
+  </div>
+</div>
+
+<script>
+function openPopup(name){
+  document.getElementById("popupTitle").innerText=name;
+  document.getElementById("popup").style.display="flex";
+}
+function closePopup(){
+  document.getElementById("popup").style.display="none";
+}
+function loadMore(){
+  const grid=document.getElementById("gameGrid");
+  for(let i=0;i<6;i++){
+    const card=document.createElement("div");
+    card.className="game-card";
+    card.innerHTML='<img src=""><h4>New Game</h4><span>Loading</span>';
+    card.onclick=()=>openPopup("New Game");
+    grid.appendChild(card);
+  }
+}
+</script>
+
+</body>
+</html>
